@@ -9,6 +9,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  target: 'static',
   nitro: {
     preset: 'netlify'  // Ensures Nitro builds with Netlify-specific settings
   },
