@@ -120,7 +120,7 @@
                         Total booking for today</label>
             </div>
             <div class="hidden sm:block">
-                  <div class="inline-block min-w-full border-b border-gray-200 align-middle">
+                  <div class="mb-10 inline-block min-w-full border-b border-gray-200 align-middle">
                         <table class="min-w-full">
                               <thead>
                                     <tr class="border-t border-gray-200">
@@ -177,7 +177,7 @@
                                     </tr>
                               </tbody>
                         </table>
-                        <nav class="mb-10 flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
+                        <nav class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6"
                               aria-label="Pagination">
                               <div class="hidden sm:block">
                                     <p class="text-sm text-gray-700">
