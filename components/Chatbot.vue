@@ -5,7 +5,7 @@
                   class="flex items-center justify-center rounded-full bg-red-900 text-white p-3 shadow-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-900">
                   <ChatBubbleLeftEllipsisIcon class="w-5 h-5 mr-2"/>
 
-                  Ask us to help!
+                  Ask us for help!
             </button>
 
             <!-- Chat box -->
