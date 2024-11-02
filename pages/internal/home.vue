@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Page title & actions -->
-    <div class="border-b border-gray-200 px-4 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
+    <div class="sticky top-0 z-10 bg-white border-b border-gray-200 px-4 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
       <div class="min-w-0 flex-1">
         <h1 class="text-lg/6 font-medium text-gray-900 sm:truncate">Home</h1>
       </div>

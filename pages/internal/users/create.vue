@@ -1,6 +1,6 @@
 <template>
       <div class="min-h-full">
-            <div class="border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+            <div class="sticky top-0 z-10 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
                   <div class="min-w-0 flex-1">
                         <h1 class="flex gap-x-3 text-base leading-7">
                               <NuxtLink to="/internal/home" class="hover:text-n3c-900 font-semibold text-gray-700">

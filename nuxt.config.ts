@@ -9,6 +9,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  nitro: {
+    preset: 'netlify'  // Ensures Nitro builds with Netlify-specific settings
+  },
   ssr: true,
   tailwindcss: {
     // Options

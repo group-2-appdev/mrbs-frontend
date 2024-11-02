@@ -1,6 +1,6 @@
 <template>
       <div class="min-h-full">
-            <div class="border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+            <div class="sticky top-0 z-10 border-b border-gray-200 px-6 py-4 flex items-center justify-between bg-white">
                   <div class="min-w-0 flex-1">
                         <h1 class="flex gap-x-3 text-base leading-7">
                               <NuxtLink to="/internal/home" class="hover:text-n3c-900 font-semibold text-gray-700">
@@ -45,15 +45,15 @@
 
                               <div>
                                     <label for="role"
-                                          class="block text-sm font-medium text-gray-900 mb-1">Requirement</label>
+                                          class="block text-sm font-medium text-gray-900 mb-1">Equipment</label>
 
-                                    <Listbox v-model="form.requirements" multiple>
+                                    <Listbox v-model="form.equipments" multiple>
                                           <div class="relative mt-1">
                                                 <!-- Listbox Button Styling -->
                                                 <ListboxButton
                                                       class="relative w-full cursor-pointer rounded-md bg-white border border-gray-300 py-2 pl-3 pr-10 text-left shadow-sm focus:outline-none focus:ring-2 focus:ring-red-900 focus:border-red-900 sm:text-sm">
-                                                      {{ form.requirements.map((item) => item.name).join(', ') ||
-                                                            'Select requirements' }}
+                                                      {{ form.equipments.map((item) => item.name).join(', ') ||
+                                                            'Select equipments' }}
                                                       <span
                                                             class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                                                             <!-- Optional Icon -->
@@ -74,7 +74,7 @@
                                                             class="cursor-pointer select-none relative py-2 pl-10 pr-4 text-gray-900 hover:bg-red-900 hover:text-white">
                                                             {{ item.name }}
                                                             <!-- Optional Check Icon for Selected Items -->
-                                                            <span v-if="form.requirements.includes(item)"
+                                                            <span v-if="form.equipments.includes(item)"
                                                                   class="absolute inset-y-0 left-0 flex items-center pl-3 text-red-600">
                                                                   <CheckIcon class="h-5 w-5" aria-hidden="true" />
                                                             </span>
@@ -193,7 +193,7 @@ const items = [
 let form = reactive({
       name: 'Meeting Room 1',
       total_pax: '30',
-      requirements: [items[0], items[1]],
+      equipments: [items[0], items[1]],
       status: 'Available',
 })
 
