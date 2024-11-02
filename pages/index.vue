@@ -38,7 +38,7 @@
             </div>
 
             <div>
-              <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-900 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-900">
+              <button type="button" @click="goTo" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-900 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-900">
                 Sign in
               </button>
             </div>
@@ -76,4 +76,9 @@
 definePageMeta({
       layout: 'auth'
 })
+
+const router = useRouter()
+const goTo = () => {
+  router.push('/internal/home')
+}
 </script>

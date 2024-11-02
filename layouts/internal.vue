@@ -128,8 +128,10 @@
                                           </div>
                                           <div class="py-1">
                                                 <MenuItem v-slot="{ active }">
-                                                <a href="#"
-                                                      :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Logout</a>
+                                                <NuxtLink to="/"
+                                                      :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">
+                                                      Logout
+                                                </NuxtLink>
                                                 </MenuItem>
                                           </div>
                                     </MenuItems>
@@ -186,30 +188,13 @@
                                                                   :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">View
                                                                   profile</a>
                                                             </MenuItem>
-                                                            <MenuItem v-slot="{ active }">
-                                                            <a href="#"
-                                                                  :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Settings</a>
-                                                            </MenuItem>
-                                                            <MenuItem v-slot="{ active }">
-                                                            <a href="#"
-                                                                  :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Notifications</a>
-                                                            </MenuItem>
                                                       </div>
                                                       <div class="py-1">
                                                             <MenuItem v-slot="{ active }">
-                                                            <a href="#"
-                                                                  :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Get
-                                                                  desktop app</a>
-                                                            </MenuItem>
-                                                            <MenuItem v-slot="{ active }">
-                                                            <a href="#"
-                                                                  :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Support</a>
-                                                            </MenuItem>
-                                                      </div>
-                                                      <div class="py-1">
-                                                            <MenuItem v-slot="{ active }">
-                                                            <a href="#"
-                                                                  :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">Logout</a>
+                                                            <NuxtLink to="/"
+                                                                  :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">
+                                                                  Logout
+                                                            </NuxtLink>
                                                             </MenuItem>
                                                       </div>
                                                 </MenuItems>

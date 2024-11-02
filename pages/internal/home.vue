@@ -287,5 +287,6 @@ const rooms = [
     bgColorClass: 'bg-blue-900',
   },
 ]
+
 const pinnedRooms = rooms.filter((project) => project.pinned)
 </script>
