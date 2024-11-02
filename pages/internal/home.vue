@@ -107,7 +107,7 @@
               <td class="px-6 py-3 text-sm font-medium text-gray-500">
                 <div class="flex text-left items-center space-x-2">
                   <span :class="{
-                    'text-red-700 ring-red-600/20 bg-red-50': room.status === 'Inactive',
+                    'text-gray-700 ring-gray-600/20 bg-gray-50': room.status === 'Inactive',
                     'text-green-700 ring-green-600/20 bg-green-50': room.status === 'Active',
                     'text-red-700 ring-red-600/20 bg-red-50': room.status === 'Cancelled',
                   }"
