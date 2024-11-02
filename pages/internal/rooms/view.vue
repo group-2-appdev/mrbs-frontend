@@ -83,11 +83,6 @@
                                                                   }}</span>
                                                       </button>
                                                 </div>
-                                                <p
-                                                      class="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
-                                                      {{ file.title }}</p>
-                                                <p class="pointer-events-none block text-sm font-medium text-gray-500">
-                                                      {{ file.size }}</p>
                                           </li>
                                     </ul>
                               </div>
