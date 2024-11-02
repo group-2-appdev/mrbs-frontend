@@ -1,7 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    preset: 'netlify', // Use the Netlify preset
+  },
   app: {
-    errorHandler: false,
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       link: [
@@ -9,14 +11,8 @@ export default defineNuxtConfig({
       ],
     },
   },
-  target: 'static',
-  nitro: {
-    preset: 'netlify'  // Ensures Nitro builds with Netlify-specific settings
-  },
   ssr: true,
-  tailwindcss: {
-    // Options
-  },
+  tailwindcss: {},
   modules: [
     '@nuxtjs/tailwindcss',
   ],

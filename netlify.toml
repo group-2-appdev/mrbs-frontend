@@ -1,8 +1,6 @@
 [build]
   command = "npm run build"
-  publish = ".output/public"
+  publish = ".output/public"  # Ensure this path matches your generated output directory
 
-[[redirects]]
-  from = "/*"
-  to = "/.netlify/functions/server"
-  status = 200
+[functions]
+  directory = ".netlify/functions"  # Set this to the path where Netlify expects the server function
