@@ -31,20 +31,22 @@
                                                 </div>
                                           </TransitionChild>
                                           <div class="flex flex-shrink-0 items-center px-4">
-                                                <svg class="h-10 w-auto text-red-900" xmlns="http://www.w3.org/2000/svg"
-                                                      viewBox="0 0 100 100">
-                                                      <!-- Calendar Shape -->
-                                                      <rect width="70" height="70" x="15" y="15" fill="none"
-                                                            stroke="currentColor" stroke-width="5" rx="10" />
-                                                      <!-- Binding Rings -->
-                                                      <circle cx="30" cy="10" r="5" fill="currentColor" />
-                                                      <circle cx="70" cy="10" r="5" fill="currentColor" />
-                                                      <!-- Calendar Grid Lines and Table -->
-                                                      <path stroke="currentColor" stroke-width="3"
-                                                            d="M25 40h50M25 55h50M25 70h50M40 50h20" />
-                                                      <!-- Chairs -->
-                                                      <path fill="currentColor" d="M35 55h5v10h-5zM60 55h5v10h-5z" />
-                                                </svg>
+                                                <NuxtLink to="/internal/home">
+                                                      <svg class="h-10 w-auto text-red-900" xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 100 100">
+                                                            <!-- Calendar Shape -->
+                                                            <rect width="70" height="70" x="15" y="15" fill="none"
+                                                                  stroke="currentColor" stroke-width="5" rx="10" />
+                                                            <!-- Binding Rings -->
+                                                            <circle cx="30" cy="10" r="5" fill="currentColor" />
+                                                            <circle cx="70" cy="10" r="5" fill="currentColor" />
+                                                            <!-- Calendar Grid Lines and Table -->
+                                                            <path stroke="currentColor" stroke-width="3"
+                                                                  d="M25 40h50M25 55h50M25 70h50M40 50h20" />
+                                                            <!-- Chairs -->
+                                                            <path fill="currentColor" d="M35 55h5v10h-5zM60 55h5v10h-5z" />
+                                                      </svg>
+                                                </NuxtLink>
                                           </div>
                                           <div class="mt-5 h-0 flex-1 overflow-y-auto">
                                                 <nav class="px-2">
@@ -74,18 +76,20 @@
             <div
                   class="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col lg:border-r lg:border-gray-200 lg:bg-gray-100 lg:pb-4 lg:pt-5">
                   <div class="flex flex-shrink-0 items-center px-6">
-                        <svg class="h-10 w-auto text-red-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                              <!-- Calendar Shape -->
-                              <rect width="70" height="70" x="15" y="15" fill="none" stroke="currentColor"
-                                    stroke-width="5" rx="10" />
-                              <!-- Binding Rings -->
-                              <circle cx="30" cy="10" r="5" fill="currentColor" />
-                              <circle cx="70" cy="10" r="5" fill="currentColor" />
-                              <!-- Calendar Grid Lines and Table -->
-                              <path stroke="currentColor" stroke-width="3" d="M25 40h50M25 55h50M25 70h50M40 50h20" />
-                              <!-- Chairs -->
-                              <path fill="currentColor" d="M35 55h5v10h-5zM60 55h5v10h-5z" />
-                        </svg>
+                        <NuxtLink to="/internal/home">
+                              <svg class="h-10 w-auto text-red-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                    <!-- Calendar Shape -->
+                                    <rect width="70" height="70" x="15" y="15" fill="none" stroke="currentColor"
+                                          stroke-width="5" rx="10" />
+                                    <!-- Binding Rings -->
+                                    <circle cx="30" cy="10" r="5" fill="currentColor" />
+                                    <circle cx="70" cy="10" r="5" fill="currentColor" />
+                                    <!-- Calendar Grid Lines and Table -->
+                                    <path stroke="currentColor" stroke-width="3" d="M25 40h50M25 55h50M25 70h50M40 50h20" />
+                                    <!-- Chairs -->
+                                    <path fill="currentColor" d="M35 55h5v10h-5zM60 55h5v10h-5z" />
+                              </svg>
+                        </NuxtLink>
                   </div>
                   <!-- Sidebar component, swap this element with another sidebar if you like -->
                   <div class="mt-5 flex h-0 flex-1 flex-col overflow-y-auto pt-1">
@@ -218,7 +222,7 @@ import { ChevronUpDownIcon } from '@heroicons/vue/20/solid';
 const navigation = [
       { name: 'Home', href: '/internal/home', icon: HomeIcon },
       { name: 'Users', href: '/internal/users', icon: UsersIcon },
-      { name: 'Rooms', href: '#', icon: CubeIcon },
+      { name: 'Rooms', href: '/internal/rooms', icon: CubeIcon },
       { name: 'Settings', href: '#', icon: Cog8ToothIcon },
 ];
 
