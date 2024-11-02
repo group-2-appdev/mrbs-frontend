@@ -1,8 +1,7 @@
 [build]
   command = "npm run generate"
-  publish = "dist"  # Point to the root of the static assets
+  publish = "dist"  # Points to the static output directory
 
-# Ensure redirects if needed
 [[redirects]]
   from = "/*"
   to = "/index.html"
