@@ -223,7 +223,7 @@ const navigation = [
       { name: 'Home', href: '/internal/home', icon: HomeIcon },
       { name: 'Users', href: '/internal/users', icon: UsersIcon },
       { name: 'Rooms', href: '/internal/rooms', icon: CubeIcon },
-      // { name: 'Settings', href: '#', icon: Cog8ToothIcon },
+      { name: 'Settings', href: '/internal/settings', icon: Cog8ToothIcon },
 ];
 
 const sidebarOpen = ref(false);
