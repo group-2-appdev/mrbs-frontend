@@ -1,6 +1,3 @@
 [build]
-  command = "npm run build"
-  publish = ".output/public"  # Ensure this path matches your generated output directory
-
-[functions]
-  directory = ".netlify/functions"  # Set this to the path where Netlify expects the server function
+  command = "npm run generate"
+  publish = "dist"

@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  target: 'static',  // Set to static for static generation
   nitro: {
-    preset: 'netlify', // Use the Netlify preset
+    output: {
+      dir: 'dist'  // Set output directory to 'dist'
+    }
   },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -12,7 +15,9 @@ export default defineNuxtConfig({
     },
   },
   ssr: true,
-  tailwindcss: {},
+  tailwindcss: {
+    // Options
+  },
   modules: [
     '@nuxtjs/tailwindcss',
   ],
