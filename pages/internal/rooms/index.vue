@@ -1,6 +1,7 @@
 <template>
       <div>
-            <div class="sticky top-0 z-10 bg-white border-b border-gray-200 px-4 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
+            <div
+                  class="sticky top-0 z-10 bg-white border-b border-gray-200 px-4 py-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8">
                   <div class="min-w-0 flex-1">
                         <h1 class="flex gap-x-3 text-base leading-7">
                               <NuxtLink to="/internal/home" class="hover:text-n3c-900 font-semibold text-gray-700">
@@ -18,14 +19,15 @@
                         </div>
                         <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
                               <NuxtLink to="/internal/rooms/create"
-                                    class="block rounded-md bg-red-900 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add
+                                    class="block rounded-md bg-red-900 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                                    Add
                                     room</NuxtLink>
                         </div>
                   </div>
             </div>
-            <div class="inline-block min-w-full border-b border-gray-200 align-middle">
-                  <table class="min-w-full">
-                        <thead>
+            <div class="overflow-x-auto">
+                  <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50 hidden md:table-header-group">
                               <tr class="border-t border-gray-200">
                                     <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900"
                                           scope="col">
@@ -33,10 +35,10 @@
                                     </th>
                                     <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900"
                                           scope="col">Status</th>
-                                          <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900"
+                                    <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-center text-sm font-semibold text-gray-900"
                                           scope="col">Pax</th>
-                                    <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900"
-                                          scope="col">Booking Period</th>
+                                    <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-sm font-semibold text-center text-gray-900"
+                                          scope="col">Bookings</th>
                                     <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900"
                                           scope="col"></th>
                               </tr>
@@ -45,11 +47,12 @@
                               <tr v-for="room in rooms" :key="room.id">
                                     <td class="px-6 py-3 text-sm font-medium text-gray-900">
                                           <div class="flex items-center space-x-3 lg:pl-2">
-                                                <div :class="[room.bgColorClass, 'h-2.5 w-2.5 flex-shrink-0 rounded-full']" aria-hidden="true" />
+                                                <div :class="[room.bgColorClass, 'h-2.5 w-2.5 flex-shrink-0 rounded-full']"
+                                                      aria-hidden="true" />
                                                 <a href="#" class="truncate hover:text-gray-600">
-                                                <span>
-                                                {{ room.title }}
-                                                </span>
+                                                      <span>
+                                                            {{ room.title }}
+                                                      </span>
                                                 </a>
                                           </div>
                                     </td>
@@ -61,21 +64,29 @@
                                                       'text-red-700 ring-red-600/20 bg-red-50': room.status === 'Not Available',
                                                       'text-blue-700 ring-blue-600/20 bg-blue-50': room.status === 'On Use',
 
-                                                }" class="inline-flex text-left items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
+                                                }"
+                                                      class="inline-flex text-left items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">
                                                       {{ room.status }}
                                                 </span>
                                           </div>
                                     </td>
-                                    <td class="px-6 py-3 text-sm font-medium text-gray-500">
+                                    <td class="px-6 py-3 text-sm font-medium text-gray-500 text-center">
                                           {{ room.totalPax }}
                                     </td>
-                                    <td class="px-6 py-3 text-sm font-medium text-gray-500">
-                                          {{ room.from }} - {{ room.to }}
+                                    <td class="px-6 py-3 text-sm font-medium text-center text-gray-500">
+                                          {{ room.total_booking }}
                                     </td>
                                     <td class="px-6 py-3 text-right text-sm text-gray-500 md:table-cell">
-                                          <NuxtLink to="/internal/rooms/edit" class="text-red-900">
-                                                Edit
-                                          </NuxtLink>
+                                          <div class="flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-2">
+                                                <NuxtLink to="/internal/rooms/view"
+                                                      class="inline-flex items-center justify-center rounded-md bg-blue-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-900">
+                                                      <MagnifyingGlassCircleIcon class="w-4 h-4 mr-2" /> View
+                                                </NuxtLink>
+                                                <NuxtLink to="/internal/rooms/edit"
+                                                      class="inline-flex items-center justify-center rounded-md bg-teal-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-teal-700 focus:ring-2 focus:ring-teal-900">
+                                                      <PencilIcon class="w-4 h-4 mr-2" /> Edit
+                                                </NuxtLink>
+                                          </div>
                                     </td>
                               </tr>
                         </tbody>
@@ -110,74 +121,79 @@
       </div>
 </template>
 <script setup>
+import { MagnifyingGlassCircleIcon, PencilIcon } from '@heroicons/vue/20/solid'
 definePageMeta({
       layout: 'internal'
 })
 
 const rooms = [
-  {
-    id: 1,
-    title: 'Meeting Room 1',
-    initials: 'MR 1',
-    status: 'On Use',
-    totalPax: 20,
-    from: 'Nov 2, 2024 4:00 AM',
-    to: 'Nov 2, 2024 5:00 AM',
-    lastUpdated: 'Nov 2, 2024',
-    pinned: true,
-    bgColorClass: 'bg-pink-600',
-  },
-  {
-    id: 2,
-    title: 'Meeting Room 2',
-    initials: 'MR 2',
-    status: 'Available',
-    totalPax: 10,
-    lastUpdated: 'Nov 1, 2024',
-    pinned: true,
-    bgColorClass: 'bg-red-900',
-  },
-  {
-    id: 3,
-    title: 'Meeting Room 3',
-    initials: 'MR 3',
-    status: 'Cancelled',
-    totalPax: 18,
-    lastUpdated: 'Oct 30, 2024',
-    pinned: false,
-    bgColorClass: 'bg-green-900',
-  },
-  {
-    id: 4,
-    title: 'Meeting Room 4',
-    initials: 'MR 4',
-    status: 'Available',
-    totalPax: 30,
-    lastUpdated: 'Nov 1, 2024',
-    pinned: true,
-    bgColorClass: 'bg-green-900',
-  },
-  {
-    id: 6,
-    title: 'Meeting Room 5',
-    initials: 'MR 5',
-    team: 'Marketing',
-    status: 'Not Available',
-    totalPax: 30,
-    lastUpdated: 'Nov 1, 2024',
-    pinned: false,
-    bgColorClass: 'bg-blue-900',
-  },
-  {
-    id: 5,
-    title: 'Meeting Room 6',
-    initials: 'MR 6',
-    team: 'Marketing',
-    status: 'Available',
-    totalPax: 30,
-    lastUpdated: 'Nov 1, 2024',
-    pinned: true,
-    bgColorClass: 'bg-red-900',
-  },
+      {
+            id: 1,
+            title: 'Meeting Room 1',
+            initials: 'MR 1',
+            status: 'On Use',
+            totalPax: 20,
+            total_booking: 5,
+            lastUpdated: 'Nov 2, 2024',
+            pinned: true,
+            bgColorClass: 'bg-pink-600',
+      },
+      {
+            id: 2,
+            title: 'Meeting Room 2',
+            initials: 'MR 2',
+            status: 'Available',
+            totalPax: 10,
+            total_booking: 0,
+            lastUpdated: 'Nov 1, 2024',
+            pinned: true,
+            bgColorClass: 'bg-red-900',
+      },
+      {
+            id: 3,
+            title: 'Meeting Room 3',
+            initials: 'MR 3',
+            status: 'Cancelled',
+            totalPax: 18,
+            total_booking: 0,
+            lastUpdated: 'Oct 30, 2024',
+            pinned: false,
+            bgColorClass: 'bg-green-900',
+      },
+      {
+            id: 4,
+            title: 'Meeting Room 4',
+            initials: 'MR 4',
+            status: 'Available',
+            totalPax: 30,
+            total_booking: 0,
+            lastUpdated: 'Nov 1, 2024',
+            pinned: true,
+            bgColorClass: 'bg-green-900',
+      },
+      {
+            id: 6,
+            title: 'Meeting Room 5',
+            initials: 'MR 5',
+            team: 'Marketing',
+            status: 'Not Available',
+            totalPax: 30,
+            total_booking: 0,
+            lastUpdated: 'Nov 1, 2024',
+            pinned: false,
+            bgColorClass: 'bg-blue-900',
+      },
+      {
+            id: 5,
+            title: 'Meeting Room 6',
+            initials: 'MR 6',
+            team: 'Marketing',
+            status: 'Available',
+            total_booking: 0,
+            totalPax: 30,
+            lastUpdated: 'Nov 1, 2024',
+            pinned: true,
+            bgColorClass: 'bg-red-900',
+      },
 ]
 </script>

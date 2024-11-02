@@ -1,6 +1,7 @@
 <template>
       <div class="min-h-full">
-            <div class="sticky top-0 z-10 border-b border-gray-200 px-6 py-4 flex items-center justify-between bg-white">
+            <div
+                  class="sticky top-0 z-10 border-b border-gray-200 px-6 py-4 flex items-center justify-between bg-white">
                   <div class="min-w-0 flex-1">
                         <h1 class="flex gap-x-3 text-base leading-7">
                               <NuxtLink to="/internal/home" class="hover:text-n3c-900 font-semibold text-gray-700">
@@ -29,6 +30,15 @@
                                           class="mt-1 w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:ring-red-900 focus:border-red-900 sm:text-sm" />
                               </div>
 
+                              <div>
+                                    <label for="about"
+                                          class="block text-sm/6 font-medium text-gray-900">Description</label>
+                                    <div class="mt-2">
+                                          <textarea id="about" name="about" rows="5" v-model="form.description"
+                                                class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-relaxed">
+                                          </textarea>
+                                    </div>
+                              </div>
                               <div>
                                     <label for="email" class="block text-sm font-medium text-gray-900">Total Pax</label>
                                     <select id="role" name="role" autocomplete="role-name" v-model="form.total_pax"
@@ -144,8 +154,8 @@
                                     <label for="project-name" class="block text-sm font-medium text-red-500">Danger
                                           Zone</label>
 
-                                          <p class="mt-1 text-sm leading-6 text-red-600">This action cannot be undone. Please
-                                                consider it first.</p>
+                                    <p class="mt-1 text-sm leading-6 text-red-600">This action cannot be undone. Please
+                                          consider it first.</p>
                                     <button type="button"
                                           class="mt-5 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
                                           Delete this room
@@ -193,6 +203,7 @@ const items = [
 let form = reactive({
       name: 'Meeting Room 1',
       total_pax: '30',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       equipments: [items[0], items[1]],
       status: 'Available',
 })

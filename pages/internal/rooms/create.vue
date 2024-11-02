@@ -28,6 +28,12 @@
                                     <input id="name" name="name" type="text" autocomplete="name"
                                           class="mt-1 w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:ring-red-900 focus:border-red-900 sm:text-sm" />
                               </div>
+                              
+                              <div>
+                                    <label for="about" class="block text-sm/6 font-medium text-gray-900">Description</label>
+                                    <textarea id="about" name="about" rows="5"
+                                                class="block w-full rounded-md border-0 py-3 px-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-relaxed"></textarea>
+                              </div>
 
                               <div>
                                     <label for="email" class="block text-sm font-medium text-gray-900">Total Pax</label>
