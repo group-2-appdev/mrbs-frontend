@@ -123,7 +123,7 @@
                         </div>
 
             <div class="mt-6 flex justify-end gap-x-4">
-                  <NuxtLink to="/internal/users"
+                  <NuxtLink to="/internal/rooms"
                         class="inline-flex items-center justify-center text-sm font-semibold text-gray-700 px-4 py-2">
                         Cancel
                   </NuxtLink>

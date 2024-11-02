@@ -125,9 +125,9 @@
                                           class="absolute left-0 right-0 z-10 mx-3 mt-1 origin-top divide-y divide-gray-200 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                           <div class="py-1">
                                                 <MenuItem v-slot="{ active }">
-                                                <a href="#"
+                                                <NuxtLink to="/internal/profile"
                                                       :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">View
-                                                      profile</a>
+                                                      profile</NuxtLink>
                                                 </MenuItem>
                                           </div>
                                           <div class="py-1">
@@ -188,9 +188,9 @@
                                                       class="absolute right-0 z-10 mt-2 w-48 origin-top-right divide-y divide-gray-200 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                                       <div class="py-1">
                                                             <MenuItem v-slot="{ active }">
-                                                            <a href="#"
+                                                            <NuxtLink to="/internal/profile"
                                                                   :class="[active ? 'bg-gray-100 text-gray-900 outline-none' : 'text-gray-700', 'block px-4 py-2 text-sm']">View
-                                                                  profile</a>
+                                                                  profile</NuxtLink>
                                                             </MenuItem>
                                                       </div>
                                                       <div class="py-1">

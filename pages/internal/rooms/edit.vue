@@ -164,13 +164,13 @@
                         </div>
 
                         <div class="mt-6 flex justify-end gap-x-4">
-                              <NuxtLink to="/internal/users"
+                              <NuxtLink to="/internal/rooms"
                                     class="inline-flex items-center justify-center text-sm font-semibold text-gray-700 px-4 py-2">
                                     Cancel
                               </NuxtLink>
                               <button type="submit"
                                     class="inline-flex items-center justify-center rounded-md bg-red-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus:ring-2 focus:ring-red-900">
-                                    Create
+                                    Save
                               </button>
                         </div>
                   </form>
