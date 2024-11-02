@@ -1,14 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  target: 'static',  // This should be 'static' for static site generation
+  target: 'static',  // Confirm target is static
   nitro: {
     prerender: {
-      routes: ['/']  // Specify routes to be prerendered
+      routes: ['/'],  // Define routes for prerendering
     },
     output: {
-      dir: 'dist',
-      publicDir: 'dist' // Override public directory to avoid nesting
-    }
+      dir: '.output',   // Use default .output directory for clarity
+    },
+  },
+  generate: {
+    dir: 'dist',       // Output final static files in `dist`
   },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
