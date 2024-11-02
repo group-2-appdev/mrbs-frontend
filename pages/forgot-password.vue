@@ -5,7 +5,7 @@
                 <h2 class="mt-8 text-2xl font-bold tracking-tight text-gray-900">Forgot Password</h2>
                 <p class="mt-2 text-sm text-gray-500">
                   Already remember your password?
-                  <NuxtLink to="/" class="font-semibold text-red-900 hover:text-red-700">Sign in here</NuxtLink>
+                  <NuxtLink to="/sign-in" class="font-semibold text-red-900 hover:text-red-700">Sign in here</NuxtLink>
                 </p>
               </div>
               
