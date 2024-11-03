@@ -50,8 +50,6 @@
                                                       </span>
                                                 </div>
                                           </div>
-                                          <img class="h-10 w-10 flex-shrink-0 rounded-full bg-gray-300"
-                                                :src="room.imageUrl" alt="" />
                                     </div>
                                     <div>
                                           <div class="-mt-px flex divide-x divide-gray-200">
