@@ -104,4 +104,18 @@
 <script setup>
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
+
+useSeoMeta({
+  title: 'Meeting Room Booking System',
+  ogTitle: 'Meeting Room Booking System',
+  description: 'Meeting Room Booking System',
+  ogDescription: 'Meeting Room Booking System',
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' }
+  ],
+  bodyAttrs: {
+    class: 'h-full bg-gray-100'
+  }
+});
+
 </script>

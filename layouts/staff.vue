@@ -221,6 +221,19 @@ import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems, TransitionC
 import { Bars3CenterLeftIcon, HomeIcon, XMarkIcon, BookOpenIcon } from '@heroicons/vue/24/outline';
 import { ChevronUpDownIcon } from '@heroicons/vue/20/solid';
 
+useSeoMeta({
+  title: 'Meeting Room Booking System',
+  ogTitle: 'Meeting Room Booking System',
+  description: 'Meeting Room Booking System',
+  ogDescription: 'Meeting Room Booking System',
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' }
+  ],
+  bodyAttrs: {
+    class: 'h-full bg-gray-100'
+  }
+});
+
 const navigation = [
       { name: 'Home', href: '/staff/home', icon: HomeIcon },
       { name: 'Bookings', href: '/staff/bookings', icon: BookOpenIcon },
